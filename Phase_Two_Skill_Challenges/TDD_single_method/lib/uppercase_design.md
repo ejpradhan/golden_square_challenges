@@ -19,7 +19,7 @@ uppercase = extract_uppercase(text)
 * uppercase is a list of uppercase words ["WORLD"]
 ```
 
-# The method doesn't print anything or have any other side-effects
+_The method doesn't print anything or have any other side-effects_
 
 ## 3. Create Examples as Tests
 
@@ -49,6 +49,7 @@ extract_uppercase("HeLLO WoRLD")
 # 6
 extract_uppercase("HELLO! WORLD!")
 # => ["HELLO", "WORLD"]
+```
 
 _Encode each example as a test. You can add to the above list as you go._
 
