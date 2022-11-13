@@ -6,19 +6,20 @@
 _Put or write the user story here. Add any clarifying notes you might have._
 
 > As a user
-> So that I can manage my time
-> I want to see an estimate of reading time for a text, assuming   
-> that I can read 200 words a minute.
+> So that I can keep track of my tasks
+> I want to check if a text includes the string #TODO.
 
 ## 2. Design the Method Signature
 
 _Include the name of the method, its parameters , return value, and side effects._
 
 ```ruby
-reading_time = calculate_reading_time(text)
 
-# * text is a string with words in it
-# * reading time is a number -integer- represents minutes
+is_includes_todo = todo(text)
+
+# * text is a string
+# * is_includes_todo is a boolean to verify
+
 ```
 
 _The method doesn't print anything or have any other side-effects_
@@ -28,31 +29,29 @@ _The method doesn't print anything or have any other side-effects_
 _Make a list of examples of what the method will take and return._
 
 ```ruby
-# 1
- reading_time("")
-# => 0
+# 1 
+todo(123)
+# => "This is not a string, cannot check!"
 
 # 2
- reading_time("one")
-# => 1
+todo("")
+# => "No text entered!"
 
-# 3
- reading_time("TWO_HUNDRED_WORDS")
-# => 1
+# 3 
+todo("cook lunch #TODO")
+# => true
 
 # 4
- reading_time("THREE_HUNDRED_WORDS")
-# => 2
+todo("cook lunch")
+# => false
 
 # 5
- reading_time("FOUR_HUNDRED_WORDS")
-# => 2
+todo("cook lunch #")
+# => false
 
 # 6
- reading_time("FIVE_THOUSAND_WORDS")
-# => 25
-
-
+todo("#todo cook lunch")
+# => false
 
 ```
 
